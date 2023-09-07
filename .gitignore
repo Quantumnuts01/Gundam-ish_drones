@@ -72,3 +72,6 @@ Plugins/*/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+AreialDrones/Content/__ExternalActors__
+AreialDrones/Content/__ExternalObjects__
+AreialDrones/Saved/Autosaves/Game/__ExternalActors__

@@ -1,0 +1,32 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"C:/Users/gustdome/Desktop/AerielDrones/AreialDrones/Content/FirstPerson/Blueprints/BP_PickUp_Rifle.uasset",
+				"C:/Users/gustdome/Desktop/AerielDrones/AreialDrones/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/7/8K/0OLPBOSZCPU1X7E3PCLCGF.uasset",
+				"C:/Users/gustdome/Desktop/AerielDrones/AreialDrones/Content/Drones/BPs/MyDrone1.uasset",
+				"C:/Users/gustdome/Desktop/AerielDrones/AreialDrones/Content/Drones/BPs/MyTargetOrb.uasset",
+				"D:/Game Jam/AreialDrones/Content/StarterContent/Particles/P_Ambient_Dust.uasset",
+				"D:/Game Jam/AreialDrones/Content/FirstPerson/Blueprints/BP_FirstPersonProjectile.uasset",
+				"D:/Game Jam/AreialDrones/Content/Drones/BPs/MyDroneTarget.uasset",
+				"D:/Game Jam/AreialDrones/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/B/K0/24XQRAY9AHAV90NV3RT7DZ.uasset",
+				"D:/Game Jam/AreialDrones/Content/FirstPerson/Blueprints/BP_FirstPersonCharacter.uasset",
+				"D:/Game Jam/AreialDrones/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/2/UI/UHFY0YNVT9E529ERWETJMF.uasset",
+				"D:/Game Jam/AreialDrones/Content/Drones/BPs/MyDroneTarget1.uasset",
+				"D:/Game Jam/AreialDrones/Content/Drones/BPs/MyDroneTarget2.uasset",
+				"D:/Game Jam/AreialDrones/Content/Drones/BPs/TargetOrb.uasset",
+				"D:/Game Jam/AreialDrones/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/8/TK/X9E7RZTIVGW6TI9XVFWCS2.uasset",
+				"D:/Game Jam/AreialDrones/Content/Drones/BPs/MyTargetOrb.uasset",
+				"D:/Game Jam/AreialDrones/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/A/KU/12YG9I1QW2GU72MG8QQX1K.uasset",
+				"D:/Game Jam/AreialDrones/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/8/N6/7HWHBG6K5ONLNTKPMLXMYR.uasset",
+				"D:/Game Jam/AreialDrones/Content/Drones/BPs/MyDrone.uasset",
+				"D:/Game Jam/AreialDrones/Content/Drones/BPs/MyDroneManager.uasset",
+				"D:/Game Jam/AreialDrones/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/D/6Q/8ASGU5QEXYUOWSIGPRAHK8.uasset",
+				"D:/Game Jam/AreialDrones/Content/__ExternalActors__/FirstPerson/Maps/FirstPersonMap/4/PT/ZXUQMNLL9GZ2UNQ5D0R4A4.uasset"
+			]
+		}
+	]
+}
