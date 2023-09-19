@@ -20,18 +20,18 @@ void ADroneTarget::BeginPlay()
 	Super::BeginPlay();
 	FRotator Rotation(0.0f, 0.0f, 0.0f);
 	FActorSpawnParameters SpawnInfo;
-	for (size_t i = 0; i < NumTargets; i++)
-	{
-		FVector DroneTargetVector = UKismetMathLibrary::RandomUnitVector() * UKismetMathLibrary::RandomFloatInRange(100, 110) + GetActorLocation();
-		DroneTarget.Add(GetWorld()->SpawnActor<ATargetOrb>(TargetTemplate, DroneTargetVector, Rotation, SpawnInfo)) ;
-		DroneOriginTarget.Add( GetWorld()->SpawnActor<ATargetOrb>(TargetTemplate, GetActorLocation(), Rotation, SpawnInfo));
-		DroneOriginTarget[i]->AttachToActor(this, FAttachmentTransformRules::KeepWorldTransform);
-		DroneTarget[i]->AttachToActor(DroneOriginTarget[i], FAttachmentTransformRules::KeepWorldTransform);
-		FVector rotator = (DroneTarget[i]->GetActorLocation() - DroneOriginTarget[i]->GetActorLocation());
-		FRotator Temprotator = FRotator(rotator.X, rotator.Y, rotator.Z);
-		Temprotator.Normalize();
-		DroneTarget[i]->SetSpeed();
-	}
+	//for (size_t i = 0; i < NumTargets; i++)
+	//{
+	//	FVector DroneTargetVector = UKismetMathLibrary::RandomUnitVector() * UKismetMathLibrary::RandomFloatInRange(100, 110) + GetActorLocation();
+	//	DroneTarget.Add(GetWorld()->SpawnActor<ATargetOrb>(TargetTemplate, DroneTargetVector, Rotation, SpawnInfo)) ;
+	//	DroneOriginTarget.Add( GetWorld()->SpawnActor<ATargetOrb>(TargetTemplate, GetActorLocation(), Rotation, SpawnInfo));
+	//	DroneOriginTarget[i]->AttachToActor(this, FAttachmentTransformRules::KeepWorldTransform);
+	//	DroneTarget[i]->AttachToActor(DroneOriginTarget[i], FAttachmentTransformRules::KeepWorldTransform);
+	//	FVector rotator = (DroneTarget[i]->GetActorLocation() - DroneOriginTarget[i]->GetActorLocation());
+	//	FRotator Temprotator = FRotator(rotator.X, rotator.Y, rotator.Z);
+	//	Temprotator.Normalize();
+	//	DroneTarget[i]->SetSpeed();
+	//}
 	
 	
 }
@@ -44,7 +44,7 @@ void ADroneTarget::Tick(float DeltaTime)
 	{
 		offset = 50;
 	}
-	for (size_t i = 0; i < NumTargets; i++)
+	for (size_t i = 0; i < DroneTarget.Num(); i++)
 	{
 		FVector temp = DroneTarget[i]->GetActorLocation();
 		FRotator TempRotator = DroneOriginTarget[i]->GetActorRotation();

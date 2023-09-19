@@ -1,9 +1,10 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
-
 #include "TP_WeaponComponent.h"
 #include "AreialDronesCharacter.h"
 #include "AreialDronesProjectile.h"
+#include "DroneTarget.h"
+#include "DrawDebugHelpers.h"
 #include "Drone.h"
 #include "GameFramework/PlayerController.h"
 #include "Camera/PlayerCameraManager.h"
@@ -40,9 +41,17 @@ void UTP_WeaponComponent::Fire()
 			//Set Spawn Collision Handling Override
 			FActorSpawnParameters ActorSpawnParams;
 			ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
-	
+			FHitResult HitResult;
+			GetWorld()->LineTraceSingleByChannel(HitResult,SpawnLocation,SpawnLocation + (GetOwner()->GetActorRightVector()*1000), ECC_Visibility );
 			// Spawn the projectile at the muzzle
-			m_dronemanager->SpawnDrone(SpawnLocation,SpawnRotation);
+			DrawDebugLine(GetWorld(), SpawnLocation,SpawnLocation + (GetOwner()->GetActorRightVector()*1000),FColor::Red,true);
+			ADroneTarget* TargetHit =Cast<ADroneTarget>(HitResult.GetActor());
+			if (TargetHit)
+			{
+				m_dronemanager->SpawnDrone(SpawnLocation,SpawnRotation,TargetHit);
+			}
+			
+			
 		}
 	}
 	

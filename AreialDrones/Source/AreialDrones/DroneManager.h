@@ -19,18 +19,22 @@ public:
 	ADroneManager();
 	UPROPERTY(EditAnywhere)
 	TArray<TSubclassOf<ADrone>> Dronetemplate;
+	TSubclassOf<ATargetOrb> DroneTargettemplate;
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 	TArray<ATargetOrb*> m_TargetOrbs;
 public:
+	//UPROPERTY(EditAnywhere)
+	//ADrone* Drone;
+	//UPROPERTY(EditAnywhere)
+	//TArray<ADroneTarget*> Targets;
 	UPROPERTY(EditAnywhere)
-	ADrone* Drone;
-	UPROPERTY(EditAnywhere)
-	ADroneTarget* Target;
+	TArray<ADrone*> Drones;
+	TArray<ADrone*> GetDrones() { return Drones; }
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 	void SetTargetOrbs(TArray<ATargetOrb*> TargetOrbs);
 	UFUNCTION(BlueprintCallable)
-	void SpawnDrone(FVector _pos,FRotator _rotation);
+	void SpawnDrone(FVector _pos,FRotator _rotation, ADroneTarget* _target);
 };
